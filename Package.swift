@@ -24,21 +24,20 @@ let package = Package(
        
         // 指定精确版本
         .package(url: "https://github.com/SnapKit/SnapKit.git", exact: "5.6.0"),
+        .package(url: "https://github.com/sunshinejr/SwiftyUserDefaults.git", .upToNextMajor(from: "5.0.0")),
+        .package(url: "https://github.com/devxoul/Then.git", from: "3.0.0"),
+        .package(url: "https://github.com/Moya/Moya.git", .upToNextMajor(from: "15.0.0")),
+//        .package(url: "https://github.com/devicekit/DeviceKit.git", from: "4.0.0"),
+//        .package(url: "https://github.com/alibaba/HandyJSON.git", from: "4.1.3"),
+//        .package(url: "https://github.com/Tencent/MMKV.git", from: "2.3.0"),
+//        .package(url: "https://github.com/CoderMJLee/MJRefresh.git", from: "3.7.9"),
+//        .package(url: "https://github.com/sunshinejr/SwiftyUserDefaults.git", from: "5.3.0"),
+//        .package(url: "https://github.com/Tencent/wcdb.git", from: "2.1.15"),
+//        .package(url: "https://github.com/devxoul/Then.git", from: "3.0.0"),
     ],
     
     // target是构建的最小单元，通常与 Sources/ 和 Tests/ 目录对应；.target: 主模块（源代码）；.testTarget: 测试模块
     targets: [
-//        .executableTarget(
-//            name: "SwiftPackageTest",
-//            dependencies: [
-//            .product(name: "Alamofire", package: "Alamofire"),
-//            .product(name: "SDWebImage", package: "SDWebImage"),
-////            .product(name: "RxSwift", package: "RxSwift"),
-////            .product(name: "RxCocoa", package: "RxSwift"),
-//            .product(name: "KeychainAccess", package: "KeychainAccess"),
-//            .product(name: "SnapKit", package: "SnapKit")
-//        ]
-//    ),
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
@@ -48,6 +47,16 @@ let package = Package(
                 "SDWebImage",
                 "SnapKit",
                 "KeychainAccess",
+                "SwiftyUserDefaults",
+                "Then",
+                "Moya",
+//                "DeviceKit"
+//                "HandyJSON",
+//                "MMKV",
+//                "MJRefresh",
+                
+//                "wcdb",
+//
             ]
             // ✅ 如果使用了资源文件
 //           resources: [
